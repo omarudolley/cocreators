@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  api:
+    build: ./backend/cocreators
+    ports:
+      - "5000:8000"
+  client:
+    build: ./frontend/cocreators
+    ports:
+      - '3000:3000'
+    depends_on:
+      - api
