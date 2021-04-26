@@ -12,9 +12,7 @@ export function is_valid_url( url ){
     const protocol_position = url.lastIndexOf( protocol );
     const domain_extension_position = url.lastIndexOf( '.' );
     return (
-        protocol_position === 0 &&
-        [ 'http:', 'https:' ].indexOf( protocol ) !== - 1 &&
-        domain_extension_position > 2 && url.length - domain_extension_position > 2
+        protocol_position === 0 && [ 'http:', 'https:' ].indexOf( protocol ) !== - 1 && url.length - domain_extension_position > 2
     );
 
 };
